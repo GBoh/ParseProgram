@@ -1,0 +1,47 @@
+PatientID:      1234568
+FacilityID: 	777358
+Facility Name: 	ACME Medical
+Reason: 		Stomach cramps
+Patient: 		Greg Bohanon
+DOB: 			05/20/1990
+Gender:			Male
+Married:		
+Age:			25
+
+=================END OF RESULT=================
+
+PatientID:      1234569
+FacilityID: 	777358
+Facility Name: 	ACME Medical
+Reason: 		N/A
+Patient: 		John Smith
+DOB: 			08/17/1998
+Gender:			Male
+Married:		Single
+Age:			17
+
+=================END OF RESULT=================
+
+PatientID:      1234570
+FacilityID: 	777359
+Facility Name: 	LoneStar Medical
+Reason: 		Car Accident
+Patient: 		
+DOB: 			
+Gender:			Female
+Married:		
+Age:			
+
+=================END OF RESULT=================
+
+PatientID:      1234571
+FacilityID: 	777359
+Facility Name: 	LoneStar Medical
+Reason: 		Stomach cramps
+Patient: 		Jane Doe
+DOB: 			01/23/1986
+Gender:			Female
+Married:		Yes
+Age:			29
+
+=================END OF RESULT=================
