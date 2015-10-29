@@ -13,27 +13,6 @@ namespace ParseProgram {
         static void Main(string[] args) {
             Console.Title = typeof(Program).Name;
             Run();
-
-            //var a = new List<LogItem> {
-            //    new LogItem {
-            //        Name = "Greg",
-            //        Age = "25",
-            //        Reason = "Stomach Cramps"
-            //    },
-            //    new LogItem {
-            //        Name = "Eric",
-            //        Age = "25",
-            //        Reason = "Headache"
-            //    }
-            //};
-            //var searchTerm = "ch";
-            //var allFields = typeof(LogItem).GetProperties();
-
-            //var results = (from li in a
-            //               where allFields.Any(f => ((string)f.GetValue(li)).Contains(searchTerm))
-            //               select li).ToList();
-
-            //Console.WriteLine(results);
         }
 
         static void Run() {
@@ -58,6 +37,8 @@ namespace ParseProgram {
             var entries = new List<LogItem>();
             Console.Clear();
 
+            //iterates over every other argument in the ConsoleCommand
+            //it it matches run the associated command via switch
             for (int i = 0; i < command.Arguments.Count; i += 2) {
                 var cmd = command.Arguments[i];
                 switch (cmd) {
@@ -74,14 +55,14 @@ namespace ParseProgram {
                         break;
                 }
             }
+            //builds a string in a nicely formated way to be displayed to the user
             var sb = new StringBuilder();
-            //var props = typeof(LogItem).GetProperties();
             foreach (var log in entries) {
                 var logProps = log.GetType().GetProperties();
                 foreach (var item in logProps) {
                     var name = item.Name;
                     var value = item.GetValue(log).ToString();
-                    sb.AppendFormat("{0}: {1}",name, value);
+                    sb.AppendFormat("{0}: {1}", name, value);
                     sb.AppendLine();
                 }
                 sb.Append("\n==============END OF RESULT==============\n\n");
