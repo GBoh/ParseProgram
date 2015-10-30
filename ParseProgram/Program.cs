@@ -84,10 +84,6 @@ namespace ParseProgram {
             return Console.ReadLine();
         }
 
-        static List<LogItem> SearchLogs() {
-            return null;
-        }
-
         /// <summary>
         /// Search through all properties to see if any contain the search term
         /// </summary>
